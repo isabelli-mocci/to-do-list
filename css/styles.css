@@ -1,0 +1,388 @@
+/*==============================================
+     ✨ Table of Contents ✨  
+================================================
+ 01. Charset Type
+ 02. Font Definition
+ 03. Global Variables
+ 04. Reset
+ 05. Layout & Structure
+ 06. Header Styles
+ 07. To-Do List Styles
+ 08. Filtro de Tasks
+ 09. Tasks Default
+ 10. Task Completed
+ 11. Checkbox Styles
+ 12. Footer
+================================================ */
+
+/* ---------------------------------------------
+   🌎 01. Charset Type
+--------------------------------------------- */
+@charset "UTF-8";
+
+/* ---------------------------------------------
+   🔠 02. Font Definition
+--------------------------------------------- */
+@font-face {
+  font-family: 'PP Neue Montreal Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PP Neue Montreal Book'), url(../assets/fonts/pp-neue/ppneuemontreal-book.woff) format('woff');
+}
+
+/* ---------------------------------------------
+   🎨 03. Global Variables
+--------------------------------------------- */
+:root {
+  /* 🎨 Paleta de Cores */
+  --color-background: linear-gradient(323deg, #eed7d7, #fcd0ee, #ccdafa, #ffe5e5);
+  --color-title: linear-gradient(to right, #ed7aff, #d904fa, #9a24c9, #5505b1);
+  --color-text: #5a5a5a;
+  --color-secondary-text: #666;
+  --color-task-text: #636363;
+  --color-primary: #d946ef;
+  --color-secondary: #af13c7;
+  --color-border: #ddd;
+  --color-divisor: #cfcaca;
+  --color-completed: #909098;
+
+  /* 📝 Tipografia */
+  --font-family-base: 'PP Neue Montreal Book';
+
+  /* ⚡️ Outros */
+  --border-radius: 6px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.062);
+}
+
+/* ---------------------------------------------
+   🧹 04. Reset
+--------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------
+   📐 05. Layout & Structure
+--------------------------------------------- */
+body {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color-background);
+  font-family: var(--font-family-base);
+}
+
+.container {
+  width: 100%;
+  max-width: 820px;
+  text-align: center;
+}
+
+.navbar, .todo-container, footer {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(5px);
+}
+
+/* ---------------------------------------------
+   🔝 06. Header Styles
+--------------------------------------------- */
+.navbar {
+  width: 820px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; margin-right: 10px; }
+
+#chamada {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gradient {
+  display: inline-block;
+  margin-top: 60px;
+  background-image: var(--color-title);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-top: 20px;
+  color: var(--color-secondary-text);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+/* --------------------+-------------------------
+   📝 07. To-Do List Styles
+--------------------------------------------- */
+.todo-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#list-name {
+  width: 55%;
+  padding: 8px;
+  border: none;
+  background: none;
+  outline: none;
+  text-align: center;
+
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: 1em;
+  font-weight: 600;
+  border-bottom: 1.8px solid var(--color-primary);
+}
+
+#list-name::placeholder {
+  color: var(--color-secondary-text);
+}
+
+.add-task {
+  margin-top: 15px;
+  display: flex;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 8px 15px;
+  border: .5px solid var(--color-border);
+  border-radius: 5px 0 0 5px;
+
+  background: rgba(255, 255, 255, 0.363);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.add-task input::placeholder {
+  color: var(--color-completed);
+  opacity: 0.8;
+}
+
+.add-task input:focus {
+  border-color: var(--color-primary);
+  background: white;
+  outline: none;
+  box-shadow: var(--box-shadow-hover);
+}
+
+.add-task button {
+  padding: 8px 20px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+.add-task button:hover {
+  background: var(--color-secondary);
+}
+
+.add-task button:active {
+  transform: scale(0.95);
+}
+
+.editable-text[contenteditable="true"]:focus {
+  color: var(--color-primary);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------
+   🎯 08. Filtro de tasks
+--------------------------------------------- */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.tabs span {
+  padding: 4px 12px;
+  transition: all 0.5s ease;
+  color: var(--color-text);
+}
+
+.tabs .active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.tabs span:hover {
+  border-bottom: 2px solid rgba(230, 123, 230, 0.377);
+}
+
+/* ---------------------------------------------
+   📋 09. Tasks Default
+--------------------------------------------- */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-divisor);
+  color: var(--color-task-text);
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+  transform: scale(1.02);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task-buttons button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-buttons button:hover {
+  background: var(--color-secondary);
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+}
+/* ---------------------------------------------
+   ✅ 10. Task Completed
+--------------------------------------------- */
+.completed {
+  color: var(--color-completed);
+  text-decoration: line-through;
+}
+
+/* ---------------------------------------------
+   ☑️ 11. Checkbox Styles
+--------------------------------------------- */
+.task input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 20%;
+  border: 2px solid var(--color-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.task input[type="checkbox"]:hover {
+  box-shadow: 0 0 8px rgba(217, 70, 239, 0.8);
+}
+
+.task input[type="checkbox"]:checked {
+  background: var(--color-primary);
+  border: none;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.task input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------------------------------
+   💜 12. Footer
+--------------------------------------------- */
+footer {
+  width: 83%;
+  max-width: 820px;
+  padding: 15px;
+  color: var(--color-secondary-text);
+  font-size: .9em;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+footer:hover {
+  transform: scale(1.02);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+

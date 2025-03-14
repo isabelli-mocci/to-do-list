@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabelli's To-Do List</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media-query.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,0,-25&icon" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <p>todolist.com</p>
+            </div>
+        </nav>
+
+        <div id="chamada">
+            <h1 class="gradient">What do you need to do?</h1>
+            <h2>Keep track of your tasks with ease!</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Seção da Lista de Tarefas -->
+        <section class="todo-container">
+
+            <div class="title-container">
+                <input id="list-name" type="text" placeholder="Name your list...">
+            </div>
+
+            <form class="add-task">
+                <input id="input-task" type="text" placeholder="Add new task...">
+                <button id="new-task" type="submit">Add</button>
+            </form>
+
+            <div class="tabs">
+                <span class="active">All</span>
+                <span>Pending</span>
+                <span>Completed</span>
+            </div>
+
+            <!-- Lista de tarefas no JS-->
+            <ul class="task-list"></ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>Made with 💜 by Isabelli Mocci | 2025 </p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
+                <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+                <a href="https://seu-portfolio.com" target="_blank">Portfólio</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>
