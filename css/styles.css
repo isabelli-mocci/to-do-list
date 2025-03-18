@@ -248,6 +248,10 @@ h2 {
   transform: scale(0.95);
 }
 
+.editable-text {
+  width: 650px;
+}
+
 .editable-text[contenteditable="true"]:focus {
   color: var(--color-primary);
   outline: none;
@@ -287,9 +291,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: justify; 
   padding: 10px;
   border-bottom: 1px solid var(--color-divisor);
   color: var(--color-task-text);
+  overflow-wrap: break-word;
   transition: transform 0.3s ease, box-shadow 0.2s ease;
 }
 
@@ -344,7 +350,7 @@ label {
 .task input[type="checkbox"] {
   position: relative;
   appearance: none;
-  width: 14px;
+  min-width: 14px;
   height: 14px;
   border-radius: 20%;
   border: 2px solid var(--color-primary);
