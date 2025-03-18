@@ -149,6 +149,35 @@ h2 {
 .todo-container {
   margin-top: 20px;
   padding: 20px;
+  max-height: 460px;
+}
+
+#task-area {
+  height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(78, 78, 78, 0.1) rgba(255, 255, 255, 0.055);
+  transition: scrollbar-color 0.3s ease;
+}
+
+/* Chrome */
+#task-area::-webkit-scrollbar {
+  width: 6px;
+  transition: width 0.3s ease;
+}
+
+#task-area::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+#task-area::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2); 
+}
+
+#task-area:hover::-webkit-scrollbar {
+  width: 8px; 
 }
 
 #list-name {
