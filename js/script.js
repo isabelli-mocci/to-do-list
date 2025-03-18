@@ -19,12 +19,12 @@
 
     🔸Persistência de Dados:
       ⮡ [x]Armazenar tarefas no navegador utilizando `localStorage`
-      ⮡ []Armazenar o nome da lista de tarefas no `localStorage`
+      ⮡ [x]Armazenar o nome da lista de tarefas no `localStorage`
       ⮡ [x]Ao recarregar a página, as tarefas e o nome da lista devem exibido novamente
 
     🔸Ações com Tarefas:
       ⮡ [x]Filtrar tarefas em: todas/pendentes/concluídas
-      ⮡ [x] Arrastar e soltar tarefa para reposicionar
+      ⮡ [x]Arrastar e soltar tarefa para reposicionar
       ⮡ [x]Permite marcar tarefas como concluídas
       ⮡ [x]Ao concluir uma tarefa, a mesma recebe mudança de estilo
 
