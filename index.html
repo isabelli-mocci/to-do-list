@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabelli's To-Do List</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,0,-25&icon">
+    <!-- Estilos locais -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/media-query.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,0,-25&icon" />
 </head>
 
 <body>
@@ -33,22 +34,22 @@
         <section class="todo-container">
 
             <div class="title-container">
-                <input id="list-name" type="text" placeholder="Name your list...">
+                <input id="list-name" type="text" placeholder="Name your list..." aria-label="Name your to-do list">
             </div>
 
             <form class="add-task">
-                <input id="input-task" type="text" placeholder="Add new task...">
+                <input id="input-task" type="text" placeholder="Add new task..." aria-label="New task">
                 <button id="new-task" type="submit">Add</button>
             </form>
 
             <div class="tabs">
-                <span class="active">All</span>
-                <span>Pending</span>
-                <span>Completed</span>
+                <span class="active" role="button">All</span>
+                <span role="button">Pending</span>
+                <span role="button">Completed</span>
             </div>
 
             <!-- Lista de tarefas no JS-->
-            <div id="task-area">
+            <div id="task-area" aria-live="polite">
                 <ul class="task-list"></ul>
             </div>
 
@@ -62,6 +63,7 @@
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/isabelli-mocci/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/isabelli-mocci" target="_blank">GitHub</a>
+                <!-- Será alterado para o link do portfólio quando pronto -->
                 <a href="https://seu-portfolio.com" target="_blank">Portfólio</a>
             </div>
         </div>
