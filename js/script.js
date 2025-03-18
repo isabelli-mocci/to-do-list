@@ -11,11 +11,13 @@
       ⮡ [x]Permite adicionar tarefas ao clicar no 'Adicionar' ou pressionar 'Enter'
       ⮡ [x]Permite adicionar nome a lista de tarefas
       ⮡ [x]Limpa o campo de entrada automaticamente após a adição de cada tarefa
+      ⮡ [x]Ao adicionar tarefas, o foco permanece no input de add task
 
     🔸Exibição de Tarefas:
       ⮡ [x]Exibir as tarefas na tela, incluindo um botão para excluí-las
       ⮡ [x]Remove tarefa da lista ao clicar no botão 'Excluir' correspondente
       ⮡ [x]Edita tarefa ao clicar no botão 'Editar'
+      ⮡ [x]Tarefas longas sofrem quebra de linha
 
     🔸Persistência de Dados:
       ⮡ [x]Armazenar tarefas no navegador utilizando `localStorage`
@@ -39,25 +41,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const taskTitle = document.querySelector("#list-name");
   let draggedTask = null;
 
-  function addTask() {
-    const taskText = taskInput.value.trim();
-    if (taskText === "") return;
-
+  function createTaskElement(taskText, isCompleted = false) {
     const taskItem = document.createElement("li");
     taskItem.classList.add("task");
     taskItem.draggable = true;
     taskItem.innerHTML = `
       <label>
-        <input class="input-checkbox" type="checkbox">
-        <span class="editable-text">${taskText}</span>
+        <input class="input-checkbox" type="checkbox" ${
+          isCompleted ? "checked" : ""
+        }>
+        <span class="editable-text ${
+          isCompleted ? "completed" : ""
+        }">${taskText}</span>
       </label>
       <div>
-        <span class="edit-task material-symbols-outlined">edit_square</span>
-        <span class="delete-task material-symbols-outlined">cancel</span>
+        <span class="edit-task material-symbols-outlined" aria-label="Edit task">edit_square</span>
+        <span class="delete-task material-symbols-outlined" aria-label="Delete task">cancel</span>
       </div>`;
+    return taskItem;
+  }
 
+  function addTask() {
+    const taskText = taskInput.value.trim();
+    if (taskText === "") return;
+
+    const taskItem = createTaskElement(taskText);
     taskList.appendChild(taskItem);
     taskInput.value = "";
+    taskInput.focus(); 
     saveTasks();
   }
 
@@ -74,21 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
     taskList.innerHTML = "";
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const savedTitle = localStorage.getItem("taskTitle") || "My List";
-    
+
     taskTitle.value = savedTitle;
     savedTasks.forEach((task) => {
-      const taskItem = document.createElement("li");
-      taskItem.classList.add("task");
-      taskItem.draggable = true;
-      taskItem.innerHTML = `
-        <label>
-          <input class="input-checkbox" type="checkbox" ${task.completed ? "checked" : ""}>
-          <span class="editable-text ${task.completed ? "completed" : ""}">${task.text}</span>
-        </label>
-        <div>
-          <span class="edit-task material-symbols-outlined">edit_square</span>
-          <span class="delete-task material-symbols-outlined">cancel</span>
-        </div>`;
+      const taskItem = createTaskElement(task.text, task.completed);
       taskList.appendChild(taskItem);
     });
   }
@@ -98,7 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
       event.target.closest("li").remove();
       saveTasks();
     } else if (event.target.classList.contains("edit-task")) {
-      const taskSpan = event.target.closest("li").querySelector(".editable-text");
+      const taskSpan = event.target
+        .closest("li")
+        .querySelector(".editable-text");
       taskSpan.contentEditable = true;
       taskSpan.focus();
 
@@ -111,7 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   taskList.addEventListener("change", (event) => {
     if (event.target.type === "checkbox") {
-      event.target.nextElementSibling.classList.toggle("completed", event.target.checked);
+      event.target.nextElementSibling.classList.toggle(
+        "completed",
+        event.target.checked
+      );
       saveTasks();
     }
   });
@@ -125,9 +130,13 @@ document.addEventListener("DOMContentLoaded", function () {
       [...taskList.children].forEach((task) => {
         const isCompleted = task.querySelector("input").checked;
         task.style.display =
-          filterType === "all" ? "flex" :
-          filterType === "pending" && !isCompleted ? "flex" :
-          filterType === "completed" && isCompleted ? "flex" : "none";
+          filterType === "all"
+            ? "flex"
+            : filterType === "pending" && !isCompleted
+            ? "flex"
+            : filterType === "completed" && isCompleted
+            ? "flex"
+            : "none";
       });
     });
   });
@@ -150,7 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   taskList.addEventListener("keypress", (event) => {
-    if (event.target.classList.contains("editable-text") && event.key === "Enter") {
+    if (
+      event.target.classList.contains("editable-text") &&
+      event.key === "Enter"
+    ) {
       event.preventDefault();
       event.target.blur();
     }
@@ -158,7 +170,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   taskButton.addEventListener("click", addTask);
   taskInput.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") addTask();
+    if (event.key === "Enter") {
+      event.preventDefault();
+      addTask();
+    }
   });
 
   taskList.addEventListener("dragstart", (event) => {
@@ -184,13 +199,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll(".task:not(.dragging)")];
+    const draggableElements = [
+      ...container.querySelectorAll(".task:not(.dragging)"),
+    ];
 
     return draggableElements.reduce(
       (closest, child) => {
         const box = child.getBoundingClientRect();
         const offset = y - box.top - box.height / 2;
-        return offset < 0 && offset > closest.offset ? { offset, element: child } : closest;
+        return offset < 0 && offset > closest.offset
+          ? { offset, element: child }
+          : closest;
       },
       { offset: Number.NEGATIVE_INFINITY }
     ).element;
@@ -198,4 +217,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadTasks();
 });
-
