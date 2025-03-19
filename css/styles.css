@@ -1,18 +1,20 @@
 /*==============================================
      ✨ Table of Contents ✨  
 ================================================
- 01. Charset Type
- 02. Font Definition
- 03. Global Variables
- 04. Reset
- 05. Layout & Structure
- 06. Header Styles
- 07. To-Do List Styles
- 08. Filtro de Tasks
- 09. Tasks Default
- 10. Task Completed
- 11. Checkbox Styles
- 12. Footer
+ 01. 🌎 Charset Type
+ 02. 🔠 Font Definition
+ 03. 🎨 Global Variables
+ 04. 🧹 Reset
+ 05. 📐 Layout & Structure
+ 06. 🔝 Header Styles
+ 07. 📝 To-Do List Styles
+ 08. 🏷️ List Name Style
+ 09. ➕ Add Task Input
+ 10. 🎯 Tasks Filter
+ 11. 📋 Tasks Default
+ 12. ✅ Task Completed
+ 13. ☑️ Checkbox Styles
+ 14. 💜 Footer
 ================================================ */
 
 /* ---------------------------------------------
@@ -27,6 +29,7 @@
   font-family: 'PP Neue Montreal Book';
   font-style: normal;
   font-weight: normal;
+  font-display: fallback;
   src: local('PP Neue Montreal Book'), url(../assets/fonts/pp-neue/ppneuemontreal-book.woff) format('woff');
 }
 
@@ -47,8 +50,8 @@
   --color-completed: #909098;
 
   /* 📝 Tipografia */
-  --font-family-base: 'PP Neue Montreal Book';
-
+  --font-family-base: 'PP Neue Montreal Book', Tahoma, sans-serif;
+  
   /* ⚡️ Outros */
   --border-radius: 6px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,23 +71,19 @@
    📐 05. Layout & Structure
 --------------------------------------------- */
 body {
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+  min-height: 100vh;
+  padding: 2.8em;
   background: var(--color-background);
   font-family: var(--font-family-base);
+  overflow-x: hidden;
 }
 
-.container {
-  width: 100%;
+.navbar, .container, footer {
+  width: 90%;
   max-width: 820px;
-  text-align: center;
-}
-
-.navbar, .todo-container, footer {
+  margin: auto; 
   background: rgba(255, 255, 255, 0.3);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -94,14 +93,9 @@ body {
 /* ---------------------------------------------
    🔝 06. Header Styles
 --------------------------------------------- */
-.navbar {
-  width: 820px;
-  padding: 10px;
-  justify-content: space-between;
-}
-
 .nav {
   display: flex;
+  padding: 1em;
   align-items: center;
 }
 
@@ -117,16 +111,14 @@ body {
 .green { background: #27c93f; margin-right: 10px; }
 
 #chamada {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .gradient {
+  padding: 1.5em 0 .2em 0;
   display: inline-block;
-  margin-top: 60px;
   background-image: var(--color-title);
   background-clip: text;
   -webkit-background-clip: text;
@@ -137,7 +129,6 @@ body {
 }
 
 h2 {
-  margin-top: 20px;
   color: var(--color-secondary-text);
   font-size: 1.3em;
   font-weight: 700;
@@ -146,14 +137,16 @@ h2 {
 /* --------------------+-------------------------
    📝 07. To-Do List Styles
 --------------------------------------------- */
+.container {
+  text-align: center;
+}
+
 .todo-container {
-  margin-top: 20px;
   padding: 20px;
-  max-height: 460px;
 }
 
 #task-area {
-  height: 240px;
+  height: 30vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin; /* Firefox */
@@ -180,6 +173,9 @@ h2 {
   width: 8px; 
 }
 
+/* --------------------+-------------------------
+   🏷️ 08. List Name Style
+--------------------------------------------- */
 #list-name {
   width: 55%;
   padding: 8px;
@@ -195,10 +191,18 @@ h2 {
   border-bottom: 1.8px solid var(--color-primary);
 }
 
+#list-name:focus {
+  border-bottom: 2px solid var(--color-secondary);
+  transition: border-color 0.3s ease-in-out;
+}
+
 #list-name::placeholder {
   color: var(--color-secondary-text);
 }
 
+/* --------------------+-------------------------
+   ➕ 09. Add Task Input
+--------------------------------------------- */
 .add-task {
   margin-top: 15px;
   display: flex;
@@ -213,7 +217,7 @@ h2 {
   background: rgba(255, 255, 255, 0.363);
   color: var(--color-text);
   font-family: var(--font-family-base);
-  font-size: 1rem;
+  font-size: 1em;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease-in-out;
 }
@@ -246,20 +250,17 @@ h2 {
 
 .add-task button:active {
   transform: scale(0.95);
+  transition: transform 0.15s ease-out;
 }
 
-.editable-text {
-  width: 650px;
-}
-
-.editable-text[contenteditable="true"]:focus {
-  color: var(--color-primary);
-  outline: none;
-  transform: translateY(-2px);
+button:focus-visible, 
+input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* ---------------------------------------------
-   🎯 08. Filtro de tasks
+   🎯 10. Tasks Filter
 --------------------------------------------- */
 .tabs {
   display: flex;
@@ -285,7 +286,7 @@ h2 {
 }
 
 /* ---------------------------------------------
-   📋 09. Tasks Default
+   📋 11. Tasks Default
 --------------------------------------------- */
 .task {
   display: flex;
@@ -304,40 +305,29 @@ h2 {
   box-shadow: var(--box-shadow-hover);
 }
 
-.task input[type="checkbox"] {
-  margin-right: 10px;
-}
-
 label {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.task-buttons {
-  display: flex;
-  gap: 10px;
+.editable-text {
+  width: 90%;
+  margin-right: 6px;
 }
 
-.task-buttons button {
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 5px 12px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.task-buttons button:hover {
-  background: var(--color-secondary);
+.editable-text[contenteditable="true"]:focus {
+  color: var(--color-primary);
+  outline: none;
+  transform: translateY(-2px);
 }
 
 .material-symbols-outlined {
   cursor: pointer;
 }
+
 /* ---------------------------------------------
-   ✅ 10. Task Completed
+   ✅ 12. Task Completed
 --------------------------------------------- */
 .completed {
   color: var(--color-completed);
@@ -345,9 +335,10 @@ label {
 }
 
 /* ---------------------------------------------
-   ☑️ 11. Checkbox Styles
+   ☑️ 13. Checkbox Styles
 --------------------------------------------- */
 .task input[type="checkbox"] {
+  margin-right: 10px;
   position: relative;
   appearance: none;
   min-width: 14px;
@@ -367,7 +358,6 @@ label {
   background: var(--color-primary);
   border: none;
   transform: scale(1.2);
-  transition: all 0.2s ease-in-out;
 }
 
 .task input[type="checkbox"]:checked::after {
@@ -381,20 +371,12 @@ label {
 }
 
 /* ---------------------------------------------
-   💜 12. Footer
+   💜 14. Footer
 --------------------------------------------- */
 footer {
-  width: 83%;
-  max-width: 820px;
   padding: 15px;
   color: var(--color-secondary-text);
   font-size: .9em;
-  transition: transform 0.3s ease, box-shadow 0.2s ease;
-}
-
-footer:hover {
-  transform: scale(1.02);
-  box-shadow: var(--box-shadow-hover);
 }
 
 .footer-container {
@@ -418,6 +400,5 @@ footer:hover {
 
 .footer-links a:hover {
   opacity: 0.7;
+  text-decoration: underline;
 }
-
-
