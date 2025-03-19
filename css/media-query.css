@@ -1,0 +1,114 @@
+/* =============================================================
+   Media Queries para responsividade do projeto To-Do List
+   ============================================================= */
+
+
+/* 
+Typical Device Breakpoints
+---------------------------------
+    DISPOSITIVO       MAX-WIDTH
+---------------------------------
+⭐ Mobile Mini          320px
+📱 Mobile Pequeno	      480px
+📱 Mobile Médio	        576px
+📱 Mobile Grande	      768px
+📲 Tablet               1024px
+💻 Desktop Médio        1280px
+🖥️ Desktop Grande	     1440px
+📺 4K / Ultra-Wide	    2560px+ 
+---------------------------------
+*/
+
+/* -------------------------------------------------------------   
+Ajustes para telas entre que 768px e 1024px (tablet) 
+---------------------------------------------------------------- */
+/* @media screen and (min-width:768px) and (max-width:1024px) */
+
+/* -------------------------------------------------------------   
+  Ajustes para telas menores que 768px (mobile grande) 
+---------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+  .gradient,
+  h2,
+  footer,
+  .navbar {
+    display: none;
+  }
+
+  body{
+    padding: 0;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+  
+  .todo-container {
+    height: 90vh;
+  }
+
+  #task-area {
+    height: 72%;
+  }
+
+  #list-name {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .add-task input {
+    width: 100%;
+  }
+
+  .add-task input,
+  .editable-text,
+  .tabs {
+    font-size: 1.1em;
+  }
+
+  .tabs {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+/* -------------------------------------------------------------   
+  Ajustes para telas menores que 480px (mobile pequeno)   
+---------------------------------------------------------------- */
+@media (max-width: 480px) {
+
+  .container {
+    min-width: 300px;
+  }
+
+  #list-name {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  .tabs {
+    font-size: 1em;
+  }
+}
+
+/* -------------------------------------------------------------   
+  Ajustes para telas menores que 320px (mobile mini) 
+---------------------------------------------------------------- */
+@media (max-width: 320px) {
+
+  #task-area {
+    height: 58%;
+  }
+
+  #list-name {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .tabs {
+    font-size: .9em;
+  }
+
+}
