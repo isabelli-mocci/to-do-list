@@ -150,7 +150,6 @@ h2 {
 --------------------------------------------- */
 .container {
   height: auto; 
-  max-height: 50vh;
   display: grid;
   grid-template-rows: auto 1fr;
   position: relative;
@@ -166,8 +165,7 @@ h2 {
 }
 
 #task-area {
-  flex-grow: 1;
-  max-height: calc(50vh - 50px);
+  max-height: 40vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin; /* Firefox */
@@ -322,7 +320,6 @@ input:focus-visible {
 }
 
 .task:hover {
-  transform: scale(1.02);
   box-shadow: var(--box-shadow-hover);
 }
 
