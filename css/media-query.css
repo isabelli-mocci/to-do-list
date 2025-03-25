@@ -9,23 +9,18 @@ Typical Device Breakpoints
     DISPOSITIVO       MAX-WIDTH
 ---------------------------------
 ⭐ Mobile Mini          320px
-📱 Mobile Pequeno	      480px
-📱 Mobile Médio	        576px
-📱 Mobile Grande	      768px
-📲 Tablet               1024px
-💻 Desktop Médio        1280px
-🖥️ Desktop Grande	     1440px
+📱 Mobile Pequeno	      375px
+📱 Mobile Médio	        425px
+📲 Tablet P             768px
+💻 Laptop / Tablet G    1024px
+💻 Desktop              1280px
+🖥️ Desktop G	           1440px
 📺 4K / Ultra-Wide	    2560px+ 
 ---------------------------------
 */
 
 /* -------------------------------------------------------------   
-Ajustes para telas entre que 768px e 1024px (tablet) 
----------------------------------------------------------------- */
-/* @media screen and (min-width:768px) and (max-width:1024px) */
-
-/* -------------------------------------------------------------   
-  Ajustes para telas menores que 768px (mobile grande) 
+Tablets P (até 768px)
 ---------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
 
@@ -36,36 +31,26 @@ Ajustes para telas entre que 768px e 1024px (tablet)
     display: none;
   }
 
-  body{
+  body {
     padding: 0;
   }
 
   .container {
-    max-width: 500px;
-  }
-  
-  .todo-container {
     height: 90vh;
   }
 
   #task-area {
-    height: 72%;
+    max-height: 76%;
   }
 
   #list-name {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-top: 10px;
     margin-bottom: 15px;
   }
 
   .add-task input {
     width: 100%;
-  }
-
-  .add-task input,
-  .editable-text,
-  .tabs {
-    font-size: 1.1em;
   }
 
   .tabs {
@@ -75,7 +60,7 @@ Ajustes para telas entre que 768px e 1024px (tablet)
 }
 
 /* -------------------------------------------------------------   
-  Ajustes para telas menores que 480px (mobile pequeno)   
+  Dispositivos Móveis G (até 480px)   
 ---------------------------------------------------------------- */
 @media (max-width: 480px) {
 
@@ -83,32 +68,66 @@ Ajustes para telas entre que 768px e 1024px (tablet)
     min-width: 300px;
   }
 
+  #task-area {
+    max-height: 80%;
+  }
+
   #list-name {
-    margin-top: 8px;
-    margin-bottom: 12px;
+    margin-top: 2px;
+    margin-bottom: 8px;
   }
 
   .tabs {
-    font-size: 1em;
+    font-size: .93em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    width: 88%;
+  }
+
+  #icons {
+    display: flex;
+  }
+}
+/* -------------------------------------------------------------   
+  Dispositivos Móveis M (até 425px) 
+---------------------------------------------------------------- */
+@media (max-width: 425px) {
+
+  label {
+    width: 85%;
   }
 }
 
 /* -------------------------------------------------------------   
-  Ajustes para telas menores que 320px (mobile mini) 
+  Dispositivos Móveis P (até 375px) 
+---------------------------------------------------------------- */
+@media (max-width: 375px) {
+
+  label {
+    width: 90%;
+  }
+
+  #icons {
+    flex-direction: column;
+  }
+}
+
+/* -------------------------------------------------------------   
+  Dispositivos Móveis Mini (até 320px) 
 ---------------------------------------------------------------- */
 @media (max-width: 320px) {
 
-  #task-area {
-    height: 58%;
-  }
-
-  #list-name {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  .tabs {
+  .add-task input,
+  .editable-text {
     font-size: .9em;
   }
 
+  #list-name {
+    font-size: 1em;
+    width: 100%;
+    margin-top: 0;
+  }
 }
