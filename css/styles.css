@@ -352,7 +352,7 @@ label {
 /* ---------------------------------------------
    ✅ 12. Task Completed
 --------------------------------------------- */
-.completed {
+.editable-text.completed {
   color: var(--color-completed);
   text-decoration: line-through;
 }
