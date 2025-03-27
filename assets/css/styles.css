@@ -323,7 +323,7 @@ input:focus-visible {
   box-shadow: var(--box-shadow-hover);
 }
 
-label {
+.task-label {
   padding: 10px;
   display: flex;
   align-items: center;

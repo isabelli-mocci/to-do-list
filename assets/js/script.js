@@ -47,6 +47,13 @@ const TaskManager = {
     this.taskTitle.addEventListener("blur", () => this.disableTitleEdit());
     this.taskTitle.addEventListener("keypress", (event) => this.handleTitleEdit(event));
     this.enableDragAndDrop();
+
+    this.taskList.addEventListener("click", (event) => {
+      const isEditable = event.target.classList.contains("editable-text");
+      if (isEditable) {
+        event.stopPropagation(); // Impede o clique de acionar o checkbox
+      }
+    });
   },
 
   /**
@@ -58,10 +65,10 @@ const TaskManager = {
     if (isCompleted) taskItem.classList.add("completed");
     taskItem.draggable = true;
     taskItem.innerHTML = `
-      <label>
+      <div class="task-label">
         <input class="input-checkbox" type="checkbox" ${isCompleted ? "checked" : ""}>
         <span class="editable-text ${isCompleted ? "completed" : ""}" tabindex="0">${taskText}</span>
-      </label>
+      </div>
       <div id="icons">
         <span class="edit-task material-symbols-outlined" role="button" tabindex="0" aria-label="Edit task">edit_square</span>
         <span class="delete-task material-symbols-outlined" role="button" tabindex="0" aria-label="Delete task">cancel</span>
@@ -126,13 +133,18 @@ const TaskManager = {
     if (event.target.classList.contains("input-checkbox")) {
       const taskItem = event.target.closest("li");
       const taskText = taskItem.querySelector(".editable-text");
-      taskItem.classList.toggle("completed", event.target.checked); 
-      taskText.classList.toggle("completed", event.target.checked); 
-      this.saveTasks();
 
-      const activeFilter = document.querySelector(".tabs .active");
-      if (activeFilter) {
-        this.filterTasks(activeFilter);
+      if (taskText.contentEditable === "true") {
+        event.preventDefault();
+      } else {
+        taskItem.classList.toggle("completed", event.target.checked); 
+        taskText.classList.toggle("completed", event.target.checked); 
+        this.saveTasks();
+  
+        const activeFilter = document.querySelector(".tabs .active");
+        if (activeFilter) {
+          this.filterTasks(activeFilter);
+        }
       }
     }
   },
