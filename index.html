@@ -2,15 +2,31 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
+    <meta name="author" content="Isabelli Cristina Mocci" />
+    <meta name="description" content="A simple and efficient To-Do List to organize your daily tasks!" />
+    <meta name="keywords" content="to-do list, lista de tarefas, produtividade, organização, web app, Isabelli Mocci, JavaScript, front-end, desenvolvimento web" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isabelli's To-Do List</title>
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,0,-25&icon">
-    <!-- Estilos locais -->
+    <meta name="copyright" content="Isabelli Mocci 2025" />
+    <meta http-equiv="content-language" content="en-US" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="To-Do List - Organize your tasks!" />
+    <meta property="og:description" content="Manage your tasks in a simple and practical way with this To-Do List!" />
+    <meta property="og:image" content="https://isabelli-mocci.github.io/to-do-list/assets/img/todo-preview.png" />
+
+    <!-- Links de ícones -->
+    <link rel="icon" href="./assets/img/icon/todo-icon.svg" />
+    <link rel="apple-touch-icon" href="./assets/img/icon/todo-icon.svg" />
     <link rel="icon" type="image/png" href="./assets/img/favicon-96x96.png" sizes="96x96" />
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/media-query.css">
+
+    <!-- Links de fontes e estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,0,-25&icon">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/media-query.css">
+    <title>To-Do List - Organize your tasks!</title>
 </head>
 
 <body>
@@ -60,7 +76,7 @@
 
     <footer>
         <div class="footer-container">
-            <p>Made with 💜 by Isabelli Mocci | 2025 </p>
+            <p>Made with 💜 by Isabelli Mocci | <span id="year"></span> </p>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/isabelli-mocci/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/isabelli-mocci" target="_blank">GitHub</a>
@@ -70,7 +86,8 @@
         </div>
     </footer>
 
-    <script src="./js/script.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/footer.js" defer></script>
 </body>
 
 </html>
