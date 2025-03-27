@@ -4,35 +4,6 @@
 //                        'To-do List'
 // =============================================================
 
-/*
-    🔹 Objetivo: criar uma Lista de Tarefas interativa e funcional com JavaScript contendo as seguintes características:
-
-    🔸Adição de Tarefas:
-      ⮡ [x]Permite adicionar tarefas ao clicar no 'Adicionar' ou pressionar 'Enter'
-      ⮡ [x]Permite adicionar nome a lista de tarefas
-      ⮡ [x]Limpa o campo de entrada automaticamente após a adição de cada tarefa
-      ⮡ [x]Ao adicionar tarefas, o foco permanece no input de add task
-
-    🔸Exibição de Tarefas:
-      ⮡ [x]Exibir as tarefas na tela, incluindo um botão para excluí-las
-      ⮡ [x]Remove tarefa da lista ao clicar no botão 'Excluir' correspondente
-      ⮡ [x]Edita tarefa ao clicar no botão 'Editar'
-      ⮡ [x]Tarefas longas sofrem quebra de linha
-
-    🔸Persistência de Dados:
-      ⮡ [x]Armazenar tarefas no navegador utilizando `localStorage`
-      ⮡ [x]Armazenar o nome da lista de tarefas no `localStorage`
-      ⮡ [x]Ao recarregar a página, as tarefas e o nome da lista devem exibido novamente
-
-    🔸Ações com Tarefas:
-      ⮡ [x]Filtrar tarefas em: todas/pendentes/concluídas
-      ⮡ [x]Arrastar e soltar tarefa para reposicionar
-      ⮡ [x]Permite marcar tarefas como concluídas
-      ⮡ [x]Ao concluir uma tarefa, a mesma recebe mudança de estilo
-
-*/
-// =============================================================
-
 /**
  * Inicializa a aplicação: armazena referências, configura eventos e carrega tarefas salvas.
  */

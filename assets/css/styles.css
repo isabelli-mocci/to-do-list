@@ -30,7 +30,7 @@
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
-  src: local('PP Neue Montreal Book'), url(../assets/fonts/pp-neue/ppneuemontreal-book.woff) format('woff');
+  src: local('PP Neue Montreal Book'), url(../fonts/pp-neue/ppneuemontreal-book.woff) format('woff');
 }
 
 /* ---------------------------------------------
