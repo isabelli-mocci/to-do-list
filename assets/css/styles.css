@@ -165,7 +165,7 @@ h2 {
 }
 
 #task-area {
-  max-height: 40vh;
+  max-height: 30vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin; /* Firefox */
