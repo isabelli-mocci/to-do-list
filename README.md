@@ -1,231 +1,227 @@
-# Projeto em andamento
-
-
-<!--
-❗ ➤ Referências usadas neste repositório:
-🔗 • https://github.com/kyechan99/capsule-render
-🔗 • https://github.com/DenverCoder1/custom-icon-badges
--->
-
 <!--📍HEAD -->
+
+<div align="center">
+    <a href="https://github.com/isabelli-mocci/to-do-list/blob/main/assets/img/Banner%20-%20Github%20(1920%20x%20800%20px).gif">
+        <img src="https://raw.githubusercontent.com/isabelli-mocci/to-do-list/refs/heads/main/assets/img/Banner%20-%20Github%20(1920%20x%20800%20px).gif" alt="To-Do List" width="800px" title="To-Do List Project Repository">
+    </a><br><br>
+    <h1 align="center">
+    To-Do List - Organize your tasks!
+    </h1>
+</div> 
 
 <!-- Apresentação do repositório: -->
 <div align="center">
-    <a href="https://github.com/isabelli-mocci/todo-list-html-css-js/blob/main/readme-assets/todolist-image.png">
-        <img src="https://raw.githubusercontent.com/isabelli-mocci/todo-list-html-css-js/refs/heads/main/readme-assets/todolist-image.png" alt="To-Do List" width="200px" title="Repositório do projeto To-Do List">
-    </a>
-    <h1 align="center">To-Do List com HTML, CSS e JavaScript</h1>
+
+With a clean and modern interface, the **✨To-Do List✨** was designed to be <br> super intuitive – add, edit, and mark your tasks as completed effortlessly.
+
+### Access the  **✨To-Do List✨** [by clicking here!](https://isabelli-mocci.github.io/)
+
 </div>
+
+<!-- Contexto do Projeto: -->
+> [!NOTE]\
+> _This project was developed as a way to apply my knowledge of **Vanilla JavaScript**._
 
 <!---DIVISÓRIA-------------->
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
 </div>
 
 <!--📍BODY -->
-<br>
-<div align="center">
-Este é meu projeto de **To-Do List** feito com **HTML5, CSS3 e JavaScript**!📋✨ <br>
-Ele foi criado para ajudar na organização e gerenciamento de tarefas do dia a dia. A ideia foi <br>
-criar uma interface simples, mas funcional, para adicionar, editar e excluir itens da lista. <br><br>
-</div>
 
-> [!NOTE]\
-> _Este projeto foi desenvolvido para colocar em prática os conceitos de manipulação do DOM com JavaScript e estilização com CSS3._
-
-<!---DIVISÓRIA-------------->
-<div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
-</div>
-
-### 📌 **Índice**
+<!-- Preview do Projeto -->
+## 📷 Project Preview
 
 <div align="center">
-
-[1️⃣ O que você encontrará aqui](#-o-que-você-encontrará-aqui) &nbsp;|&nbsp;
-[2️⃣ Tecnologias e Ferramentas](#-tecnologias-utilizadas) &nbsp;|&nbsp;
-[3️⃣ Funcionalidades do Projeto](#-funcionalidades) <br>
-[4️⃣ Imagem do Projeto](#-imagem-do-projeto) &nbsp;|&nbsp;
-[5️⃣ Links úteis](#-links-úteis) &nbsp;|&nbsp;
-[6️⃣ Posso usar algo deste repositório?](#-posso-usar-algo-deste-repositório)
-
+    <img src="https://github.com/isabelli-mocci/to-do-list/blob/main/assets/media/demo_to-do-list.gif?raw=true" width="80%" alt="Demo">
 </div>
 
 <!---DIVISÓRIA-------------->
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
-</div>
-
-<!-- O que você encontrará aqui -->
-## 1️⃣ O que você encontrará aqui:
-<br>
-
-| Item |                              **Descrição**                                        |
-| --- | ---------------------------------------------------------------------------------- |
-| 1️⃣ | **Projeto de To-Do List desenvolvido com HTML, CSS e JavaScript**                   |
-| 2️⃣ | **Interface simples e funcional**                                                  |
-| 3️⃣ | **Manipulação de DOM para adicionar, editar e excluir tarefas**                    |
-| 4️⃣ | **Uso de armazenamento local para persistência de dados (LocalStorage)**            |
-| 5️⃣ | **Aprendizado de conceitos essenciais de JavaScript (funções, arrays e eventos)**   |
-
-<br>
-
-<!---DIVISÓRIA-------------->
-<div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
-</div>
-
-<!-- Tecnologias Utilizadas: -->
-<div align="left">
-  
-## 2️⃣ Tecnologias e Ferramentas
-
-<div align="center">
-
-> ### ⚡Em destaque:
-> **HTML5 • CSS3 • JavaScript** <br><br>
-
-</div>
-
-#### **💻 Tecnologias**
-
-- **HTML5** (Estruturação da página web)
-- **CSS3** (Estilização e responsividade)
-- **JavaScript** (Manipulação do DOM, interação com o usuário, eventos)
-
----
-
-#### **🛠 Ferramentas**
-
-- **GitHub** (Hospedagem do repositório de código)
-- **Visual Studio Code** (Editor de código utilizado para o desenvolvimento)
-
----
-
-#### **📦 Bibliotecas e Frameworks**
-
-- **Nenhum Framework** foi utilizado neste projeto. O foco foi em aprender e aplicar o puro HTML, CSS e JavaScript.
-
----
-
-#### **📚 Práticas de Desenvolvimento**
-
-- **Manipulação do DOM** (Criação e remoção de elementos HTML com JavaScript)
-- **LocalStorage** (Armazenamento de dados no navegador para persistência)
-- **Eventos e Listeners** (Interação do usuário com a interface)
-
----
-
-#### **💾 Armazenamento**
-
-- **LocalStorage** (Armazenamento das tarefas para garantir que os dados não sejam perdidos quando a página for recarregada)
-
-<!---DIVISÓRIA-------------->
-<div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
 </div>
 
 <!-- Funcionalidades do Projeto -->
+## ✅ Project Features
 
-## 3️⃣ Funcionalidades
+Besides being **user-friendly** & **responsive**, the current version of **✨To-Do List✨** includes the following features:
 
-👉🏼 Este projeto oferece as seguintes funcionalidades:
+### Task Addition: ➕
+- ☑️ Adds tasks using the button or by pressing "Enter".
+- ☑️ Automatically clears the input field after each task is added.
+- ☑️ Keeps focus on the input field after adding a task.
 
-- **Adicionar Tarefas**: Insira novas tarefas na lista.
-- **Marcar como Concluída**: Marque as tarefas como concluídas com um simples clique.
-- **Excluir Tarefas**: Exclua tarefas da lista.
-- **Persistência de Dados**: Suas tarefas são salvas no navegador utilizando o LocalStorage, para que não se percam após o recarregamento da página.
+---
 
+### Task Display: 📋
+- ☑️ Displays tasks with buttons to delete and edit.
+- ☑️ Wraps long task texts for better readability.  
+
+---
+
+### Task Actions: 🔄
+- ☑️ Filters tasks into: **All**, **Pending** and **Completed**. 
+- ☑️ Allows dragging and dropping tasks to reposition them.
+- ☑️ Marks tasks as completed with a style change.
+
+---
+
+### Data Persistence: 💾
+- ☑️ Tasks and list name are stored in `localStorage`.
+- ☑️ Data remains accessible even after reloading the page. 
+
+<!---DIVISÓRIA-------------->
+<div align="center">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
+</div>
+
+## 🌈 Visual Identity
+
+<div align="center">
+    
+The interface of **✨To-Do List✨** was designed to be clean and functional, focusing on the **user experience**. <br>
+With soft colors, modern typography, and the _glassmorphism_ effect, the design conveys lightness <br>
+and clarity, helping users focus on what really matters: their tasks!✨
+
+</div>
+
+<div align="center">
+<h3>🖥️ Desktop Version ↓</h3> 
+<img src="https://raw.githubusercontent.com/isabelli-mocci/to-do-list/refs/heads/main/assets/img/preview_to-do-list_browser.png" width="60%" alt="Desktop Version">
+</div>
+
+---
+
+<div align="center">
+<h3>📱 Mobile Version ↓</h3> 
+<img src="https://raw.githubusercontent.com/isabelli-mocci/to-do-list/refs/heads/main/assets/img/preview_to-do-list_mobile.png" width="34%" alt="Mobile Version">
+</div>
+
+<!---DIVISÓRIA-------------->
+<div align="center">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
+</div>
+
+## 📂 Repository Cloning
 <details>
- <summary> Como Usar </summary>
+ <summary>❓How to clone this repository: </summary><br> 
 
-1. Clone este repositório ou baixe os arquivos do projeto.
-2. Abra o arquivo `index.html` em seu navegador.
-3. Adicione, marque ou remova tarefas diretamente na interface!
+1. Open your terminal.
+
+2. Clone the repository using the following command:
+
+   ```bash
+   git clone https://github.com/isabelli-mocci/to-do-list.git
+   ```
+
+3. Access the project folder:
+
+   ```bash
+   cd to-do-list
+   ```
+
+4. Open the project in your favorite code editor (e.g., VS Code).
+
+5. To run the project locally, simply open the `index.html` file in your browser.
+
+6. If you make changes and want to push them back to GitHub, follow these steps:
+
+   - Add the modified files:
+
+     ```bash
+     git add .
+     ```
+
+   - Commit your changes:
+
+     ```bash
+     git commit -m "description of changes"
+     ```
+
+   - Push to the remote repository:
+
+     ```bash
+     git push origin main
+     ```
 
 </details>
 
 <!---DIVISÓRIA-------------->
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
 </div>
 
-<!-- Imagem do Projeto -->
+## 🤝 Contribute
 
-## 4️⃣ Imagem do Projeto
+If you want to contribute to this project, feel free to fork it and submit a pull request with improvements or fixes!
 
-<div align="center">
-    <img src="https://raw.githubusercontent.com/isabelli-mocci/todo-list-html-css-js/refs/heads/main/readme-assets/todolist-screenshot.png" width="80%" alt="Screenshot do projeto To-Do List">
-</div>
+**🔹 Desired upgrades for future versions:**
+
+- [ ] **Customizable themes:** Option for users to choose between different themes.
+- [ ] **Subtasks:** Ability to add nested tasks.
+- [ ] **Login and database:** Implementation of authentication to sync tasks across devices.
+- [ ] **Alerts and notifications:** Automatic reminders for tasks with deadlines.
 
 <!---DIVISÓRIA-------------->
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
 </div>
 
-<!-- Links úteis -->
+## 📜 License
 
-## 5️⃣ Links úteis
-
-Aqui estão alguns links que me ajudaram no desenvolvimento desse projeto:
-
-### Documentações Oficiais
-
-- 📚 [Documentação Oficial - HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- 🎨 [Documentação Oficial - CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- 🖥️ [Documentação Oficial - JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-
-### Recursos para Aprender
-
-- 🖥️ [MDN Web Docs - JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide)
-- 🕹️ [JavaScript30 - Curso gratuito de JavaScript](https://javascript30.com/)
-- 🛠️ [FreeCodeCamp - Guia de Desenvolvimento Front-End](https://www.freecodecamp.org/)
-
-<!---DIVISÓRIA-------------->
-<div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
-</div>
-
-<!-- Sobre a licença -->
-
-## 6️⃣ Posso usar algo deste repositório? <br><br>
-
-> 🏆 **MIT License na área!**
+> 🏆 **MIT License**
 >
-> Esse repositório é open-source, então pode usar, re-usar e distribuir sem crise!  
-> Só não esquece de me dar os créditos onde for necessário! 😉
+> This repository is open-source, so feel free to use, reuse, and distribute it! <br>
+> Just don't forget to credit me where necessary! 😉
 
 <!---DIVISÓRIA-------------->
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
 </div>
-<br><br>
+
+## 📚 References
+
+- **Fonts:** [Google Fonts](https://fonts.google.com/).
+- **Icons:** [Material Symbols - Google Fonts](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:person:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=user&icon.size=24&icon.color=%23242424).
+- **Favicon:** Icons created by [Freepik - Flaticon](https://www.flaticon.com/br/icones-gratis/bola-de-discoteca).
+- **Glassmorphism Effect:** [CSS Glass Generator](https://css.glass/).
+- **JavaScript:** Concepts from the course ["JavaScript e TypeScript – do Básico ao Avançado"](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=KEEPLEARNINGBR) by [Luiz Otávio Miranda](https://beacons.ai/otaviomiranda).
+
+<!---DIVISÓRIA-------------->
+<div align="center">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=1&color=c75ee7">
+</div><br><br>
 
 <!--📍FOOTER -->
 
-<!-- Despedida... -->
-<div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Indie+Flower&size=30&duration=1&pause=99999&color=D33584&center=true&vCenter=true&repeat=false&width=620&height=60&lines=Obrigada+pela+visita...+Até+logo%21" alt="Goodbye Dev" title="Não se esqueça, sempre há mais código a ser escrito!" />
-  </a>
-</div>
-
-<!---DIVISÓRIA-------------->
-<div align="center">
-  <img width=45% align="center" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=d83a7c">
-</div> <br>
-
 <!-- Criado por... -->
 <div align="center">
-  Feito com 🩷 por <a href="https://github.com/isabelli-mocci"> Isabelli Mocci</a>
+  Made with 🩷 by  <a href="https://github.com/isabelli-mocci"> Isabelli Mocci</a>
 </div> <br>
 
 <!-- Minha assinatura -->
 <table align="center">
   <tr>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/isabelli-mocci/todo-list-html-css-js/refs/heads/main/readme-assets/belli.png" alt="Belli Fairytales logo">
+    <td align="center" width="150px">
+      <a href="https://github.com/isabelli-mocci">
+        <img src="https://avatars.githubusercontent.com/u/191166352?v=4" width="100px" style="border-radius: 50%;" alt="Isabelli Mocci Avatar"/>
+        <br>
+      </a>
+    </td>
+    <td align="left" style="padding-left: 15px;">
+      <p><strong>📬 Contact us:</strong></p>
+      <p>
+        <a href="https://www.linkedin.com/in/isabelli-mocci/" target="_blank" style="text-decoration: none;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="18px" alt="LinkedIn">
+          <span>LinkedIn - Isabelli Cristina Mocci</span>
+        </a>
+      </p>
+      <p>
+        <a href="mailto:isabellimocci.tech@gmail.com" style="text-decoration: none;">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="18px" alt="Email">
+          <span>Email - isabellimocci.tech@gmail.com</span>
+        </a>
+      </p>
     </td>
   </tr>
 </table>
-
