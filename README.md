@@ -1,8 +1,8 @@
 <!--📍HEAD -->
 
 <div align="center">
-    <a href="https://github.com/isabelli-mocci/to-do-list/blob/main/assets/img/Banner%20-%20Github%20(1920%20x%20800%20px).gif">
-        <img src="https://raw.githubusercontent.com/isabelli-mocci/to-do-list/refs/heads/main/assets/img/Banner%20-%20Github%20(1920%20x%20800%20px).gif" alt="To-Do List" width="800px" title="To-Do List Project Repository">
+    <a href="https://github.com/isabelli-mocci/to-do-list/blob/main/assets/img/banner-readme.gif">
+        <img src="https://raw.githubusercontent.com/isabelli-mocci/to-do-list/refs/heads/main/assets/img/banner-readme.gif" alt="To-Do List" width="800px" title="To-Do List Project Repository">
     </a><br><br>
     <h1 align="center">
     To-Do List - Organize your tasks!
