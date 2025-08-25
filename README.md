@@ -14,7 +14,7 @@
 
 With a clean and modern interface, the **✨To-Do List✨** was designed to be <br> super intuitive – add, edit, and mark your tasks as completed effortlessly.
 
-### Access the  **✨To-Do List✨** [by clicking here!](https://isabelli-mocci.github.io/)
+### Access the  **✨To-Do List✨** [by clicking here!](https://isabelli-mocci.github.io/to-do-list/) 
 
 </div>
 
